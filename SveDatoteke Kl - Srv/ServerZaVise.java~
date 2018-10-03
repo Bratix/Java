@@ -1,0 +1,16 @@
+public class ServerZaVise{
+  static int SERVER_PORT = 9999;
+  static int num = 0;
+  
+  
+  public static void main (String [] args){
+    try{
+    ServerSocket ss = new ServerSocket(SERVER_PORT);
+    while(true){
+      Socket s = s.accept();
+      new ServerThread(s,num++);
+    }
+    }
+    catch(IOException e){}
+  }
+}

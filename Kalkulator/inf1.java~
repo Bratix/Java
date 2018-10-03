@@ -1,0 +1,4 @@
+public interface inf1{
+  int sin();
+  int cos();
+}

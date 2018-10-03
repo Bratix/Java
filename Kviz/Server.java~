@@ -1,0 +1,16 @@
+import java.io.*;
+import java.util.*;
+import java.net.*;
+
+public class Server{
+  static int ServerPort = 9999;
+  public static void main()throws IOException{
+  ServerSocket ss = new ServerSocket(ServerPort);
+  
+  while(true)
+  {
+    Socket s = ss.accept();
+    new MultiServer(s);
+  }
+  }
+}

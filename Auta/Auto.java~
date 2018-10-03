@@ -1,0 +1,14 @@
+public  class Auto{
+  String id,prv,marka,kategorija;
+  Auto(String id,String prv,String marka,String kategorija){
+    this.id=id;
+    this.prv=prv;
+    this.marka=marka;
+    this.kategorija=kategorija;
+  }
+  Auto(){};
+  public String toString()
+  {
+    return id + "-" + prv + "-" + marka + "-" + kategorija;
+  }
+}

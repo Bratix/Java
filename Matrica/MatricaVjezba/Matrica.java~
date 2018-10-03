@@ -1,0 +1,19 @@
+package MatricaVjezba;
+import java.util.*;
+import java.io.*;
+
+public class Matrica {
+  
+  Matrica() throws IOException{
+    System.out.println("Unesite dimenzije matrice");
+    int a,b;
+    Scanner sc = new Scanner(System.in);
+    a = sc.nextInt();
+    b = sc.nextInt();
+  }
+  
+  public void PSB(){
+    Random r = new Random();
+    
+  }
+}

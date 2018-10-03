@@ -1,0 +1,7 @@
+package MatricaVjezbe;
+
+public class MatricaIzuzetak extends Exceptions{
+  MatricaIzuzetak(){
+    super();
+  }
+}

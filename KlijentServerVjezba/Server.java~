@@ -1,0 +1,32 @@
+import java.io.*;
+import java.net.*;
+import java.util.Date;
+
+public class Server{
+static int ServerPort = 9999;
+
+public static void main(String []args){
+  Socket s = new Socket (ServerPort);
+  
+  Socket s = s.accept();
+  
+  System.out.println("Prihvacen klijent");
+  
+  BufferedReader in = new BufferedReader(new InputStreamReader(s.getInputStream()));
+  PrintWriter out = new PrintWriter(new BufferedWriter(new OutputStreamWriter(s.getOutputStream()))),true);
+
+ String komanda = in.readLine();
+ 
+ if(komanda.equalsTo("Amar"))
+   String response = "Dobar";
+ else
+   response = "Nije Dobar";
+ 
+ out.response;
+ 
+ out.close();
+ int.close();
+ s.close();
+  
+}
+}

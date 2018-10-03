@@ -1,0 +1,8 @@
+public class Kalkulator{
+  
+  public int a,b;
+  Kalkulator(){a=0;b=0;};
+  
+  void sabiranje(){return a+b;};
+  void oduzimanje(){return a-b;};
+}

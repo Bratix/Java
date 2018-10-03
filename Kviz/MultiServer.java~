@@ -1,0 +1,68 @@
+import java.io.*;
+import java.util.*;
+import java.net.*;
+
+public class MultiServer extends Thread{
+
+  Socket s;
+  BufferedReader in;
+  PrintWriter out;
+  
+  public MultiServer(Socket s){
+   this.s=s;
+    try{
+       in = new BufferedReader(new InputStreamReader(s.getInputStream()));
+       out = new PrintWriter(new BufferedWriter(new OutputStreamWriter(s.getOutputStream())),true);
+    }
+    catch(IOException e){};
+    
+    start();
+  }
+  
+  public void run(){
+    String prijem = "";
+    String odg = "";
+    int tacni = 0;
+    
+    try{
+    File f = new File("pitanja.txt");
+    FileReader ff = new FileReader (f);
+    BufferedReader citaj = new BufferedReader (ff);
+    String line= "";
+    
+    while(line != null)
+    {
+      line = citaj.readLine();
+      
+      String []pitanje = prijem.split(";");
+      
+      out.println(line);
+      System.out.println(pitanje[3]);
+      prijem = in.readLine();
+      
+      if(prijem.equals(pitanje[3]))
+      {
+        out.println("Tacan odgovor!");
+        tacni++;
+      }
+      else
+      {
+        out.println("Netacan odgovor! Tacan odgovor je: " + pitanje[4]);
+      }
+      
+    }
+    
+    
+    out.println("Tacni odgovori: " + tacni );
+    
+    in.close();
+    out.close();
+    s.close();
+    }
+    catch(Exception e){}
+    
+    
+    
+  }
+  
+}

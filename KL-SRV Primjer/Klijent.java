@@ -1,0 +1,21 @@
+import java.net.*;
+import java.io.*;
+public class Klijent{
+  
+public static int ServerPort = 9999;
+  
+   public static void main(String []args)throws IOException{
+     InetAddress adr = InetAddress.getByName("127.0.0.1");
+     Socket s = new Socket(adr,ServerPort);
+     
+     PrintWriter out = new PrintWriter(new BufferedWriter(new OutputStreamWriter(s.getOutputStream())),true);
+     BufferedReader in = new BufferedReader( new InputStreamReader(s.getInputStream()));
+     
+     
+     out.println("Dobar dan!");
+     String prijem = in.readLine();
+     System.out.println(prijem);
+     
+   
+   }
+}

@@ -1,0 +1,24 @@
+import java.net.*;
+import java.io.*;
+
+public class MultiThread{
+ private Socket s;
+ private PrintWriter;
+ private BufferedReader;
+ 
+ public Multithread(Socket s){
+   this.s = s;
+   start();
+   PrintWriter out = new PrintWriter(new BufferedWriter(new OutputStreamWriter(s.getOutputStream())),true);
+   BufferedReader in = new BufferedReader( new InputStreamReader(s.getInputStream()));
+ }
+ 
+ public void run () {
+   
+   String prijem = in.readLine();
+   System.out.println(prijem);
+   out.println("Uspjesno ispisana poruka!");
+   
+ }
+ 
+}

@@ -1,0 +1,4 @@
+1.Ko rano rani: ;a)Dvije srece grabi;b) Rano ustaje;c) Nije lijen;a
+2.U cemu je ovaj kviz programiran : ;a)c++;b)c#;c)Java;c
+3.2+2 = : ;a)3;b)4;c)5;b
+4.Kontinent nije: ;a)Azija;b)Evropa;c)Kanada;c
